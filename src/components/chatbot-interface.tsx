@@ -5,7 +5,8 @@ import { MessageCircle, MenuIcon, Users, X, Send, Bot, User } from 'lucide-react
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { ScrollArea } from '@/components/ui/scroll-area'
-import Link from 'next/link'
+import { Link } from "react-router-dom";
+
 
 type Message = {
   id: number
@@ -92,9 +93,9 @@ export function ChatbotInterfaceComponent() {
       <div className="bg-gradient-to-b from-blue-500 to-blue-400 p-6 text-white text-center">
         <h2 className="text-3xl font-bold mb-6 animate-pulse">Welcome to Swym</h2>
         <div className="flex flex-col space-y-2">
-          <Link href="#" className="text-white hover:underline">Home</Link>
-          <Link href="#" className="text-white hover:underline">About</Link>
-          <Link href="#" className="text-white hover:underline">Contact</Link>
+          <Link to="/" className="text-white hover:underline">Home</Link>
+          <Link to="/" className="text-white hover:underline">About</Link>
+          <Link to="/" className="text-white hover:underline">Contact</Link>
         </div>
       </div>
       <div className="p-4">
@@ -110,7 +111,7 @@ export function ChatbotInterfaceComponent() {
   )
 
   return (
-    <div className="fixed bottom-4 right-4">
+    <div className="fixed bottom-4 right-4 z-100">
       {isOpen ? (
         <div className="bg-white rounded-lg shadow-xl w-80 h-[500px] flex flex-col border border-gray-200 overflow-hidden">
           <div className="p-4 border-b flex justify-between items-center bg-gradient-to-b from-blue-500 to-blue-400 text-white">
